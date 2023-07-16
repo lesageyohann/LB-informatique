@@ -1,0 +1,115 @@
+.part{
+    display: flex;
+    margin-top: 50px;
+    background-color: $grey;
+    height: 360px;
+    width: 100%;
+
+    @include for-tablet {
+        height: auto;
+    }
+
+    @include for-mobile {
+        height: auto;
+    }
+    
+       &_art{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 20px;
+
+        @include for-tablet {
+            flex-direction: column;
+        }
+
+        @include for-mobile {
+            flex-direction: column;
+        }
+
+            &_div1{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 40%;
+
+                @include for-tablet {
+                    width: 80%;
+                }
+        
+                @include for-mobile {
+                    width: 80%;
+                }
+
+                &_title{
+                    border-right: 5px solid $blue;
+                    width: 350px;
+                    color: $red;
+
+                    @include for-tablet {
+                        width: 50%;
+                        border-right: none;
+                    }
+                    @include for-mobile {
+                        width: 80%;
+                        border-right: none;
+                    }
+                }
+
+                &_imgdiv{
+
+                    &_img{
+                        width: 90%;
+                        border-radius: 10% / 50%;
+                    }
+                }
+            }
+
+            &_div2{
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 40%;
+                margin-top: 30px;
+
+                @include for-tablet {
+                    width: 80%;
+                    margin-top: 10px;
+                }
+        
+                @include for-mobile {
+                    width: 80%;
+                    margin-top: 0px;
+                }
+
+                &_title{
+                    font-weight: bold;
+                    color: $blue;
+                }
+
+                &_texte{
+                    margin-left: -50px;
+                    margin-right: 50px;
+                    text-align: justify;
+
+                    @include for-tablet {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
+        
+                    @include for-mobile {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
+                }
+
+                &_link{
+                    text-decoration: none;
+                    color: $red;
+                    font-weight: bold;
+                }
+            }
+       }
+}
